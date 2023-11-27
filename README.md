@@ -1,16 +1,9 @@
-# Nerfies
+# COLE
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+Graphic design, which has been evolving since the 15th century, plays a crucial role in advertising. The creation of high-quality designs demands creativity, innovation, and lateral thinking. This intricate task involves understanding the objective, crafting visual elements such as the background, decoration, font, color, and shape, formulating diverse professional layouts, and adhering to fundamental visual design principles.
 
-If you find Nerfies useful for your work please cite:
-```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}
-```
+In this paper, we introduce COLE, a hierarchical generation framework purposed to comprehensively address these challenges. This Cole system can transform a straightforward intention prompt into a high-quality graphic design, while also supporting flexible editing based on user input. Examples of such input might include directives like ``design a poster for Hisaishi's concert.'' The key insight is to dissect the complex task of text-to-design generation into a hierarchy of simpler sub-tasks, each addressed by specialized models working collaboratively. The results from these models are then consolidated to produce a cohesive final output. Our hierarchical task decomposition can streamline the complex process and significantly enhance generation reliability. Our COLE system consists of multiple fine-tuned Large Language Models (LLMs), Large Multimodal Models (LMMs), and Diffusion Models (DMs), each specifically tailored for a design-aware text or image generation task.
 
-# Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Furthermore, we construct the DesignerIntention benchmark to highlight the superiority of our COLE over existing methods in generating high-quality graphic designs from user intent. We perceive our Cole as an important step towards addressing more complex visual design generation tasks in the future.
+
+This is the repository that contains source code for the Cole, code will be released..
