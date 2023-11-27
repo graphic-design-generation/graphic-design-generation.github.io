@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="COLE:A Hierarchical Generation Framework for Graphic Design">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COLE : A Hierarchical Generation Framework for Graphic Design
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">COLE <br>A Hierarchical Generation Framework <br>for Graphic Design</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+<!--              作者排序-->
+              <span>Peidong Jia </span><sup>2</sup>,</span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~Chenxuan_Li1">Chenxuan Li</span><sup>2</sup>&nbsp&nbsp&nbsp</span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~Zeyu_Liu3">Zeyu Liu</span><sup>3</sup>&nbsp&nbsp&nbsp
+            </span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~Yichao_Shen1">Yichao Shen</span><sup>3</sup>&nbsp&nbsp&nbsp
+            </span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~xingru_chen1">Xingru chen</span><sup>3</sup>&nbsp&nbsp&nbsp
+            </span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/yuyua/">Yuhui Yuan</a><sup>1,2</sup>&nbsp&nbsp&nbsp
+            </span>
+            <span class="author-block">
+              <a href="https://yinglinzheng.netlify.app">Yinglin Zheng</a><sup>3</sup>&nbsp&nbsp&nbsp
+            </span>
+            </span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/doch/">Dong Chen</a><sup></sup>&nbsp&nbsp&nbsp
+            </span>
+            </span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~Ji_Li7">Ji Li</span><sup></sup>&nbsp&nbsp&nbsp
+            </span>
+            </span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~Xiaodong_Xie1">Xiaodong Xie</span><sup></sup>&nbsp&nbsp&nbsp
+            </span>
+            </span>
+            <span class="author-block">
+              <span href="https://openreview.net/profile?id=~Shanghang_Zhang4">Shanghang Zhang</span><sup></sup>&nbsp&nbsp&nbsp
+            </span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/bainguo/">Baining Guo</a><sup></sup>
+            </span>
+            <br>
+            <span class="is-size-6 publication-authors">
+              <sup>1</sup><span>project lead&nbsp&nbsp&nbsp</span>
+            </span>
+            <span class="is-size-6 publication-authors">
+              <sup>2</sup><span>joint core contribution&nbsp&nbsp&nbsp</span>
+            </span>
+            <span class="is-size-6 publication-authors">
+              <sup>3</sup><span>equal technical contribution</span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup> </sup>Microsoft Research Asia&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+            <span class="author-block"><sup> </sup>Peking University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/JarekPaulDonald/COLE"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                  </span>-->
+<!--                  <span>Code</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+              <span class="link-block">
+              <a href=" " class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-edit fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="edit" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path></svg><!-- <i class="fas fa-edit"></i> Font Awesome fontawesome.com -->
+                    </span>
+                <span>Demo</span>
+              </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--四个图片-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+
+        <div class="column is-full-width">
+
+          <div class="content has-text-justified">
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/teaser/86.png"
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/benchmark/Posts/6.png"
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/benchmark/Advertising/3.png"
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/creative/40.png"
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/benchmark/Events/6.png"
+
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/benchmark/Events/1.png"
+
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+            <div class="column is-3 has-text-centered">
+              <img src="./static/img/benchmark/Advertising/6.png"
+
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+            <div class="column is-3 has-text-centered">
+
+              <img src="./static/img/creative/58.png"
+
+
+                   class="interpolation-image"
+                   alt="Interpolate start reference image."/>
+              <p></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+</section>
+<!--五个图片-->
+<!--<div class="columns is-vcentered interpolation-panel">-->
+<!--  &lt;!&ndash; 第一个图片元素，使用 is-offset-1 &ndash;&gt;-->
+<!--  <div class="column is-2 is-offset-1 has-text-centered">-->
+<!--    <img src="./static/img_lr/teaser/1_pred.jpg"-->
+<!--         class="interpolation-image"-->
+<!--         alt="Interpolate start reference image."/>-->
+<!--    <p></p>-->
+<!--  </div>-->
+<!--  <div class="column is-2 has-text-centered">-->
+<!--    <img src="./static/img_lr/teaser/20.jpg"-->
+<!--         class="interpolation-image"-->
+<!--         alt="Interpolate start reference image."/>-->
+<!--    <p></p>-->
+<!--  </div>-->
+<!--  <div class="column is-2 has-text-centered">-->
+<!--    <img src="./static/img_lr/teaser/3_pred.jpg"-->
+<!--         class="interpolation-image"-->
+<!--         alt="Interpolate start reference image."/>-->
+<!--    <p></p>-->
+<!--  </div>-->
+<!--  <div class="column is-2 has-text-centered">-->
+<!--    <img src="./static/img_lr/teaser/7.jpg"-->
+<!--         class="interpolation-image"-->
+<!--         alt="Interpolate start reference image."/>-->
+<!--    <p></p>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; 最后一个图片元素，使用 is-offset-1 &ndash;&gt;-->
+<!--  <div class="column is-2 has-text-centered">-->
+<!--    <img src="./static/img_lr/teaser/7.jpg"-->
+<!--         class="interpolation-image"-->
+<!--         alt="Your image alt"/>-->
+<!--    <p></p>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!---->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Graphic design, which has been evolving since the 15th century, plays a crucial role in advertising.
+            The creation of high-quality designs demands creativity, innovation, and lateral thinking.
+            This intricate task involves understanding the objective, crafting visual elements such as the background, decoration, font, color, and shape, formulating diverse professional layouts, and adhering to fundamental visual design principles.
+          </p>
+          <p>
+            In this paper, we introduce COLE, a hierarchical generation framework purposed to comprehensively address these challenges.
+            This Cole system can transform a straightforward intention prompt into a high-quality graphic design, while also supporting flexible editing based on user input.
+            Examples of such input might include directives like ``design a poster for Hisaishi's concert.'' The key insight is to dissect the complex task of text-to-design generation into a hierarchy of simpler sub-tasks, each addressed by specialized models working collaboratively.
+            The results from these models are then consolidated to produce a cohesive final output.
+            Our hierarchical task decomposition can streamline the complex process and significantly enhance generation reliability.
+            Our COLE system consists of multiple fine-tuned Large Language Models (LLMs), Large Multimodal Models (LMMs), and Diffusion Models (DMs), each specifically tailored for a design-aware text or image generation task.
+          </p>
+          <p>
+            Furthermore, we construct the DesignerIntention benchmark to highlight the superiority of our COLE over existing methods in generating high-quality graphic designs from user intent. We perceive our Cole as an important step towards addressing more complex visual design generation tasks in the future.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Diversity Results</h2>
+        <br>
+      </div>
+    </div>
+
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="columns is-centered">
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img/diversity/20_pred_3072.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p></p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img/diversity/20_pred_12402.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p></p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img/diversity/20_refine_6890.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p></p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img/diversity/20_refine_67834.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p></p>
+      </div>
+    </div>
+
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+  </div>
+
+
+  <div class="columns is-centered">
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/193_89042.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/193_36925.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/193_3072.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/193_659032.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/320_42.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/320_3072.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/320_36925.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/320_115074.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/307_42.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/307_65741.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/307_89042.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/diversity/307_115074.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!--Diversity Result-->
+
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Cole support editable result</h2>
+      <br>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img_lr/edit/1_ori.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p>Original</p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img_lr/edit/1_textedit.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p>Edit text only</p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img_lr/edit/1_objedit.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p>Edit object only</p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img_lr/edit/1_composed.png" class="interpolation-image" alt="Interpolate start reference image."/>
+      <p>Finaly result</p>
+    </div>
+  </div>
+
+    <div class="columns is-centered">
+
+
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img_lr/edit/69_pred.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p>Original</p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img_lr/edit/14.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p>Edit text only</p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img_lr/edit/4.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p>Edit object only</p>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <img src="./static/img_lr/edit/15.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+        <p>Finaly result</p>
+      </div>
+  </div>
+
+
+
+
+
+<!--  Editable -->
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">More Results</h2>
+        <br>
+      </div>
+    </div>
+
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/teaser/Stage2_119_pred_v2.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/teaser/Stage2_277_pred_v2.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/60.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/CoversAndHeaders/5.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/CoversAndHeaders/6.png"
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/benchmark/CoversAndHeaders/7.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Events/1.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Events/2.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Events/3.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Events/4.png"
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/benchmark/Events/5.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Events/6.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Events/7.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/1.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/2.png"
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/3.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/4.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/5.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/6.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/7.png"
+
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/benchmark/Posts/1.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Posts/2.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Posts/3.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Posts/4.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Posts/5.png"
+
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/benchmark/Posts/6.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/Posts/7.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+
+    <!--No more benchmark-->
+    <!--No more benchmark-->
+    <!--No more benchmark-->
+
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/4.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/30.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/31.png"
+
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/creative/37.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/39_pred.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/40.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/benchmark/MaketingMaterials/1.png"
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/41.png"
+
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+  <div class="columns is-vcentered interpolation-panel">
+    <!-- 第一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 is-offset-1 has-text-centered">
+      <img src="./static/img/creative/44.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/48.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/49.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/55.png"
+
+
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+      <p></p>
+    </div>
+    <!-- 最后一个图片元素，使用 is-offset-1 -->
+    <div class="column is-2 has-text-centered">
+      <img src="./static/img/creative/58.png"
+
+
+           class="interpolation-image"
+           alt="Your image alt"/>
+      <p></p>
+    </div>
+  </div>
+
+<!--left one Creative-->
+
+</section>
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@article{park2021nerfies,-->
+<!--  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},-->
+<!--  title     = {Nerfies: Deformable Neural Radiance Fields},-->
+<!--  journal   = {ICCV},-->
+<!--  year      = {2021},-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    <br>
+    Website adapted from the following <a href="https://nerfies.github.io/">template</a>.
+  </div>
+</section>
+
+</body>
+</html>
