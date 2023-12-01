@@ -52,11 +52,97 @@
     border: none;
     box-shadow: none;
   }
+  .image_wrapper {
+    position: relative;
+    width: 226px;
+    height: 226px;
+  }
+
+  .image_container {
+    border-radius: 10px; /*设置图片的圆角，可以根据你的需求调整这个值*/
+    /*margin: 10px; !* 在图片的外部元素上设置间距 *!*/
+    overflow: hidden; /* 为了保持图片的圆角效果 */
+    position: relative;
+    width: 100%;
+
+    padding-bottom: 100%;
+  }
+
+  .image_container img {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 这会使图片保持原始比例，但仍然填充其容器 */
+    object-position: center; /* 新增加的代码，让图片居中 */
+  }
+
+  .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    font-family: 'Comic Sans MS', 'Verdana', 'Tahoma', sans-serif;
+    text-align: center; /* 让文本在其容器中水平居中 */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .image_container:hover .caption {
+    opacity: 1;
+  }
+
+
+
+  .column.is-2.has-text-centered img.interpolation-image {
+
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+    object-position: center; /* 新增加的代码，让图片居中 */
+  }
+
+  .column.is-2.has-text-centered:hover img.interpolation-image {
+    opacity: 0.5;
+  }
+
+  .column.is-2.has-text-centered .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    font-family: 'Comic Sans MS', 'Verdana', 'Tahoma', sans-serif;
+    text-align: center; /* 让文本在其容器中水平居中 */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .column.is-2.has-text-centered:hover .caption {
+    opacity: 1;
+  }
+
+  .columns.is-centered img {
+    margin-bottom: 20px; /* 或者你想要的任何值 */
+  }
+
 
   .section { margin: 3px; padding: 5px; }
 </style>
 
 <!--<h1 class="title is-1 publication-title">COLE :A Hierarchical Generation Framework for Graphic Design</h1>-->
+
 
 <section class="hero">
   <div class="hero-body">
@@ -298,6 +384,14 @@
 <!--    <p></p>-->
 <!--  </div>-->
 <!--</div>-->
+<!--<div class="image_wrapper nomobile">-->
+<!--  <div class="image_container">-->
+<!--    <img src= "./static/img_lr/teaser/7.jpg" alt="描述图片的文字">-->
+<!--    <div class="caption">-->
+<!--      <div>A happy panda is playing guitar and singing loudly.</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 <!---->
 <section class="section">
@@ -324,40 +418,83 @@
               </style>
               <div class="row">
                 <div class="column">
-                  <img src="./static/img/teaser/Stage2_320_pred_v2.png"
-
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
+                  <div class="image_container">
+                    <img src="./static/img/teaser/Stage2_320_pred_v2.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Design a recruiting post for a graphic designer job opening. Encourage interested candidates to send their CV to
+                        yourname@email.com</div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="column">
-                  <img src="./static/img/teaser/Stage1_98_pred.png" alt="Image 1">
-
+                  <div class="image_container">
+                    <img src="./static/img/teaser/Stage1_98_pred.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Design a gift certificate for a travel insurance company promoting their services with a 30% discount offer. The
+                        certificate should convey a sense of safety and protection while travelling.</div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="column">
-                  <img src="./static/img/teaser/20.png" alt="Image 1">
-
+                  <div class="image_container">
+                    <img src="./static/img/teaser/20.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Create a series of posters for a fictional Ancient Greek Olympics, with each poster highlighting a different sport like
+                        chariot racing or discus throw, styled in traditional Greek pottery art.</div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="column">
-                  <img src="./static/img/creative/31.png" alt="Image 1">
-
+                  <div class="image_container">
+                    <img src="./static/img/creative/31.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Design an attractive poster for a Mars botanical garden tour. Illustrate a greenhouse with a variety of extraterrestrial
+                        plants. Use vibrant colors to depict the potential biodiversity on Mars.</div>
+                    </div>
+                  </div>
                 </div>
+
               </div>
               <div class="row">
                 <div class="column">
-                  <img src="./static/img/creative/37.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/img/creative/37.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Create an enticing poster for a classical orchestra concert in the heart of the Amazon Rainforest. (...).
+                        Incorporate subtle hints of
+                        wildlife and flora within the musical instruments.</div>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="column">
+                  <div class="image_container">
+                    <img src="./static/img/creative/49.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Design a promotional poster for a Titanic-themed immersive theatre experience. (...).
+                        It should also tease some of the scenes from the play, such as the grand dining hall and the ship's deck.</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="column">
-                  <img src="./static/img/creative/49.png" alt="Image 1">
-
+                  <div class="image_container">
+                    <img src="./static/img/benchmark/MaketingMaterials/5.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Create a coupon that promotes a garden design service offered by Yard Culture. The coupon is a gift voucher valued at
+                        $49 and can only be used once. It is valid until November 15th. The coupon number is No:7496-4587.</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="column">
-                  <img src="./static/img/benchmark/MaketingMaterials/5.png" alt="Image 1">
-
-                </div>
-                <div class="column">
-                  <img src="./static/img/teaser/Stage1_390_pred.png" alt="Image 1">
-
+                  <div class="image_container">
+                    <img src="./static/img/teaser/Stage1_390_pred.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Promote a stand-up comedy show happening on November 12th, 20xx.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -365,64 +502,121 @@
             <div class="slider-item" data-slider-index="1">
               <div class="row">
                 <div class="column">
-                  <img src="./static/img/teaser/86.png"
+                  <div class="image_container">
+                    <img src="./static/img/teaser/86.png"
 
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
-                </div>
-                <div class="column">
-                  <img src="./static/img/benchmark/Posts/6.png"
-
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
-
-                </div>
-                <div class="column">
-                  <img src="./static/img/teaser/3_pred.png"
-
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Design an animated digital poster for a fantasy concert where Joe Hisaishi performs on a grand piano on a moonlit
+                        beach. The scene should be magical, with bioluminescent waves and a starry sky. The poster should invite viewers to
+                        an exclusive virtual event.</div>
+                    </div>
+                  </div>
 
                 </div>
                 <div class="column">
-                  <img src="./static/img/creative/40_pred.png"
 
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
+                  <div class="image_container">
+                    <img src="./static/img/benchmark/Posts/6.png"
 
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Create an Instagram story promoting a special Christmas offer for a chocolate drink. The offer includes a 20%
+                        discount and encourages customers to order now.</div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="column">
+                  <div class="image_container">
+                    <img src="./static/img/teaser/3_pred.png"
+
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Create a customer testimonial advertisement showcasing a pink clothing collection. The advertisement includes a
+                        positive review from Jenny Wilson.</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <div class="column">
+                  <div class="image_container">
+                    <img src="./static/img/creative/40_pred.png"
+
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Design an alluring poster for a blues concert in a clearing of the Amazon Rainforest. (...).
+                        Use a moody, midnight blue palette and incorporate
+                        silhouettes of blues instruments and nocturnal wildlife.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="column">
-                  <img src="./static/img/benchmark/Events/6.png"
+                  <div class="image_container">
+                    <img src="./static/img/benchmark/Events/6.png"
 
 
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
-
-                </div>
-                <div class="column">
-                  <img src="./static/img/benchmark/Events/1.png"
-
-
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
-
-                </div>
-                <div class="column">
-                  <img src="./static/img/teaser/Stage1_136_pred.png"
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Design an advertisement card to promote the sale of premium quality school equipment, with a focus on enhancing the
+                        learning experience for students.</div>
+                    </div>
+                  </div>
 
 
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
 
                 </div>
                 <div class="column">
-                  <img src="./static/img/creative/58.png"
+                  <div class="image_container">
+                    <img src="./static/img/benchmark/Events/1.png"
 
 
-                       class="interpolation-image"
-                       alt="Interpolate start reference image."/>
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Create a business card for a travel agency that offers vacation planning services. The design features a red suitcase to represent travel. The contact information includes phone number +123-456-7890 and website www.yourwebsite.com.</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <div class="column">
+                  <div class="image_container">
+                    <img src="./static/img/teaser/Stage1_136_pred.png"
+
+
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Create a poster advertising a corner spice shop with a wide range of spices and ingredients.</div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="column">
+                  <div class="image_container">
+                    <img src="./static/img/creative/58.png"
+
+
+                         class="interpolation-image"
+                         alt="Interpolate start reference image."/>
+                    <div class="caption">
+                      <div>Create a captivating poster for an upcoming documentary about the mysteries of the Egyptian pyramids. (...). Use a muted color palette to imitate the sands of Egypt and the age-old structures.</div>
+                    </div>
+                  </div>
+
 
                 </div>
               </div>
@@ -430,37 +624,85 @@
             <div class="slider-item" data-slider-index="2">
               <div class="row">
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/Events_17.png" alt="Image 1">
-                </div>
-                <div class="column">
-                  <img src="./static/new_resource/init_pngs/Events_18.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/Events_17.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Create an invitation card for an origami class that teaches the attendees how to make flowers and animals. The class is from 5 PM to 6.30 PM on Jan 9th. More information is available on the website myorigami.net.</div>
+                    </div>
+                  </div>
+
 
                 </div>
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/Events_23.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/Events_18.png" alt="Image 1">
+
+                    <div class="caption">
+                      <div>Design a festive Christmas greeting card with a cute and playful illustration that features a winter scene with trees, snowflakes and a festive greeting. The card is part of the HelloChristmas series and features a red and white color scheme.</div>
+                    </div>
+                  </div>
 
                 </div>
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/Events_30.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/Events_23.png" alt="Image 1">
+
+                    <div class="caption">
+                      <div>Design an elegant invitation for a wedding dinner rehearsal, with a romantic and festive feel. The event date is August 10, 2022 and the names are Dana and Alan.</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="column">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/Events_30.png" alt="Image 1">
+
+                    <div class="caption">
+                      <div>Create a Valentine's Day greeting card with a romantic and playful design that expresses love. The text 'Happy Valentine's Day' and 'I Love You' are included.</div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
               <div class="row">
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/Events_32.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/Events_32.png" alt="Image 1">
+
+                    <div class="caption">
+                      <div>Design a thank you card with a floral theme and a message expressing gratitude. The card is intended to be used for business purposes and features the company logo.</div>
+                    </div>
+                  </div>
 
                 </div>
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/MarketingMaterials_38.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/MarketingMaterials_38.png" alt="Image 1">
+
+                    <div class="caption">
+                      <div>Design a premium and high quality emblem for a coffee house that emphasizes on the freshness and aroma of the coffee served. The text 'Coffee & More' is included to show that there is more to offer than just coffee.</div>
+                    </div>
+                  </div>
 
                 </div>
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/MarketingMaterials_44.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/MarketingMaterials_44.png" alt="Image 1">
+
+                    <div class="caption">
+                      <div>Design a poster to promote a charity bike ride event to raise funds and support for a humanitarian cause. The event will be held on June 26th and the website for registration and donation is www.funbike.com.</div>
+                    </div>
+                  </div>
 
 
                 </div>
                 <div class="column">
-                  <img src="./static/new_resource/init_pngs/Advertising_5.png" alt="Image 1">
+                  <div class="image_container">
+                    <img src="./static/new_resource/init_pngs/Advertising_5.png" alt="Image 1">
+                    <div class="caption">
+                      <div>Promote camping equipment for adventurous couples who enjoy spending time in nature and camping. Encourage them to order now through the ad on Instagram. </div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
@@ -541,19 +783,19 @@
 
     <!-- 第一个图片元素，使用 is-offset-1 -->
     <div class="columns is-centered">
-      <div class="column is-2 has-text-centered">
+      <div class="column is-2 ">
         <img src="./static/img/diversity/20_pred_3072.png" class="interpolation-image" alt="Interpolate start reference image."/>
         <p></p>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-2 ">
         <img src="./static/img/diversity/20_pred_12402.png" class="interpolation-image" alt="Interpolate start reference image."/>
         <p></p>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-2 ">
         <img src="./static/img/diversity/20_refine_6890.png" class="interpolation-image" alt="Interpolate start reference image."/>
         <p></p>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-2 ">
         <img src="./static/img/diversity/20_refine_67834.png" class="interpolation-image" alt="Interpolate start reference image."/>
         <p></p>
       </div>
@@ -561,22 +803,21 @@
 
     <!-- 最后一个图片元素，使用 is-offset-1 -->
   </div>
-
   <div class="columns is-vcentered interpolation-panel">
   <div class="columns is-centered">
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/193_89042.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/193_36925.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/193_3072.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/193_659032.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
@@ -585,19 +826,19 @@
   <div class="columns is-vcentered interpolation-panel">
 
   <div class="columns is-centered">
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/320_42.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/320_3072.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/320_36925.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/320_115074.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
@@ -606,19 +847,19 @@
   <div class="columns is-vcentered interpolation-panel">
 
   <div class="columns is-centered">
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/307_42.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/307_65741.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/307_89042.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
+    <div class="column is-2 ">
       <img src="./static/img/diversity/307_115074.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p></p>
     </div>
@@ -639,20 +880,20 @@
   </div>
 
   <div class="columns is-centered">
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/1_ori.png" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/1_ori.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Original</p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/1_textedit.png" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/1_textedit.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Edit text only</p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/1_objedit.png" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/1_objedit.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Edit object only</p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/1_composed.png" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/1_composed.png" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Finally result</p>
     </div>
   </div>
@@ -660,20 +901,20 @@
   <div class="columns is-centered">
 
 
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/2_ori.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/69_pred.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Original</p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/2_textedit.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/14.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Edit text only</p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/2_objedit.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/4.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Edit object only</p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/edit/2_composed.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
+    <div class="column is-2 ">
+      <img src="./static/img_lr/edit/15.jpg" class="interpolation-image" alt="Interpolate start reference image."/>
       <p>Finally result</p>
     </div>
   </div>
@@ -684,7 +925,8 @@
 
   <!--  Editable -->
 
-
+<br>
+  <br>
 
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
@@ -695,226 +937,380 @@
 
   <div class="columns is-vcentered interpolation-panel">
     <!-- 第一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 is-offset-1 has-text-centered">
-      <img src="./static/img/teaser/Stage2_119_pred_v2.png"
+    <div class="column is-2 is-offset-1">
+      <div class="image_container">
+        <img src="./static/img/teaser/Stage2_119_pred_v2.png"
 
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a gift card for a store's Boxing Day sale. The gift card is worth $200 and can be used for shopping on Boxing Day.</div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/teaser/Stage2_277_pred_v2.png"
+
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create an Instagram post that encourages people to vote and emphasizes the importance of their vote. Use a prominent illustration of a man casting his ballot, and include the text \"Your vote matters more than ever! Your Voice, Your Future. Vote for us.</div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/creative/60.png"
+
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Construct an eye-catching poster for an upcoming academic conference on Quantum Physics. The design should
+            encapsulate the mysterious and profound nature of the subject. (...). Make sure the conference
+            details and keynote speakers are clearly visible.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/teaser/Stage2_277_pred_v2.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/CoversAndHeaders/5.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
-      <p></p>
-    </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/creative/60.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a Youtube thumbnail for promoting an antique store subscription service. Showcase the variety of unique
+            vintage goods available in the store.</div>
+        </div>
+      </div>
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
-      <p></p>
-    </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/CoversAndHeaders/5.png"
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
     <!-- 最后一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/CoversAndHeaders/6.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/CoversAndHeaders/6.png"
 
-           class="interpolation-image"
-           alt="Your image alt"/>
+             class="interpolation-image"
+             alt="Your image alt"/>
+        <div class="caption">
+          <div>Design a Facebook event cover for a winter decoration workshop featuring lectures and demonstrations by Miranda
+            Yates, Sam Knightly, Zachary Evans, and Veronica Floyd on December 24 at Lafayette Studio.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
   </div>
   <div class="columns is-vcentered interpolation-panel">
     <!-- 第一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 is-offset-1 has-text-centered">
-      <img src="./static/img/benchmark/CoversAndHeaders/7.png"
+    <div class="column is-2 is-offset-1 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/CoversAndHeaders/7.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a Facebook cover image to announce a flower exhibition event.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/creative/44.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/creative/44.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a poster for a chess tournament set in an ancient Roman arena. Immerse the audience in a world where strategic battles are fought not with swords, but with chess pieces. Evoke the grandeur of the Colosseum with a backdrop of sandstone hues and imposing Roman architecture.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img_lr/compare_global/events_replace.jpg"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img_lr/compare_global/events_replace.jpg"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Design a holiday-themed gift card to promote the sale of gift boxes and packaging for the Christmas in July event.
+            Include the website address www.yourbrand.com and store name.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Events/3.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Events/3.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a Valentine’s Day greeting card with a cute and romantic design. The card includes the phrase ’Happy
+            Valentine’s Day’ and ’Much love to you!’</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
     <!-- 最后一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Events/4.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Events/4.png"
 
-           class="interpolation-image"
-           alt="Your image alt"/>
+             class="interpolation-image"
+             alt="Your image alt"/>
+        <div class="caption">
+          <div>Create a birthday card with a festive and colorful design featuring a cake with fruits. The card is an invitation to a birthday party happening on June 22nd from 8pm to 11pm at 123 st. Any city 4567.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
   </div>
   <div class="columns is-vcentered interpolation-panel">
     <!-- 第一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 is-offset-1 has-text-centered">
-      <img src="./static/img/benchmark/Events/5.png"
+    <div class="column is-2 is-offset-1 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Events/5.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a business card for a car service company that highlights their commitment to providing reliable and efficient
+            car maintenance and repair services. The slogan ’Give your car wings’ emphasizes the quality of service provided.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Advertising/7.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Advertising/7.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create an Instagram ad for a toy store’s Black Friday and Cyber Monday sale with a focus on the discount of 45% off
+            on selected toys.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Events/7.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Events/7.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a Women's Day greeting card with signs of female gender, celebrating women and their achievements. The design should be beautiful and include floral elements. The card should be suitable for store use and have a message of 'Happy Women's Day'.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/MaketingMaterials/1.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/images/63248f16d924097ccf4a616c_pred.png"
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Design an elegant invitation for a wedding dinner rehearsal, with a romantic and festive feel. The event date is August 10, 2022 and the names are Dana and Alan.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
     <!-- 最后一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/teaser/1_pred.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/teaser/1_pred.png"
 
-           class="interpolation-image"
-           alt="Your image alt"/>
+             class="interpolation-image"
+             alt="Your image alt"/>
+        <div class="caption">
+          <div>Design a gift certificate for a travel insurance company that offers a 30% discount for all kinds of travel.</div>
+        </div>
+      </div>
+
       <p></p>
     </div>
   </div>
   <div class="columns is-vcentered interpolation-panel">
     <!-- 第一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 is-offset-1 has-text-centered">
-      <img src="./static/img/benchmark/MaketingMaterials/3.png"
+    <div class="column is-2 is-offset-1 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/MaketingMaterials/3.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a Thanksgiving gift certificate with an elegant and sophisticated design that offers a 50% discount on
+            decorations. The message wishes a happy Thanksgiving to the recipient.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/MaketingMaterials/4.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/MaketingMaterials/4.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Design a colorful store logo with an illustration of leaves to represent a fresh and vibrant shopping experience. The
+            store may be named TB.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/teaser/Stage2_193_pred_v2.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/teaser/Stage2_193_pred_v2.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a LinkedIn post with a cartoon illustration to promote an article about the benefits and growing popularity of remote work from home. The post links to a website for more information about the topic and is associated with a specific company and CEO John Doe.,
+            </div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/MaketingMaterials/6.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/MaketingMaterials/6.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Design a poster to promote a charity bike ride event to raise funds and support for a humanitarian cause. The event
+            will be held on June 26th and the website for registration and donation is www.funbike.com.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
     <!-- 最后一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/MaketingMaterials/7.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/MaketingMaterials/7.png"
+             class="interpolation-image"
+             alt="Your image alt"/>
+        <div class="caption">
+          <div>Create an advertisement poster for a college merchandise store that has been operating since 1991. The design should
+            focus on college and university branded gear, including clothes, backpacks, and bags.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Your image alt"/>
       <p></p>
     </div>
   </div>
   <div class="columns is-vcentered interpolation-panel">
     <!-- 第一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 is-offset-1 has-text-centered">
-      <img src="./static/img/benchmark/Posts/1.png"
+    <div class="column is-2 is-offset-1 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Posts/1.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create an Instagram story to advertise an antique vase available at a store with a brown color scheme. The promotion offers up to a 50% discount and is only available from October 22-25, 2023.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Posts/2.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Posts/2.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create an Instagram story to promote a special offer of 30% discount on the autumn collection. Encourage users to visit the website by including a link in bio. </div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Posts/3.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Posts/3.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create an Instagram story frame with a futuristic and fantasy-like design that features a man in an astronaut helmet and a space-themed background. The text #ThisIsMetaLife and SPACEDOUT are included.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Posts/4.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Posts/4.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a recruiting Instagram post to advertise a job vacancy for a UI/UX designer. Encourage passionate individuals to apply and provide a link to apply in the bio.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
     <!-- 最后一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Posts/5.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Posts/5.png"
+             class="interpolation-image"
+             alt="Your image alt"/>
+        <div class="caption">
+          <div>Promote a personal styling service for summer vacation outfits on Instagram. The contact number is +00 1357 2468
+            and website is www.website.com.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Your image alt"/>
       <p></p>
     </div>
   </div>
   <div class="columns is-vcentered interpolation-panel">
     <!-- 第一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 is-offset-1 has-text-centered">
-      <img src="./static/img/creative/30.png"
+    <div class="column is-2 is-offset-1 ">
+      <div class="image_container">
+        <img src="./static/img/creative/30.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create a poster for a Mars charity marathon. Highlight the challenging environment of Mars while also symbolizing the spirit of resilience and determination. Encourage viewers to donate for the cause of making life sustainable on Mars.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
 
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/benchmark/Posts/7.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/benchmark/Posts/7.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Create an Instagram story ad for an antique shop, promoting the sale of a timeless typewriter. Encourage customers to visit the store by swiping up on the story.</div>
+        </div>
+      </div>
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
 
@@ -922,28 +1318,43 @@
     <!--No more benchmark-->
     <!--No more benchmark-->
 
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/teaser/Stage2_217_pred_v2.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/teaser/Stage2_217_pred_v2.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Design a Christmas sale poster with a fun and festive look. The poster should advertise up to 50% off on Christmas
+            accessories, with a limited time offer.</div>
+        </div>
+      </div>
 
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
-    <div class="column is-2 has-text-centered">
-      <img src="./static/img/creative/39_pred.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/img/creative/39_pred.png"
+             class="interpolation-image"
+             alt="Interpolate start reference image."/>
+        <div class="caption">
+          <div>Design a dramatic poster for an opera performance in a natural Amazon Rainforest amphitheater. (...). Show a dramatic
+            scene unfolding on the forest stage.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
       <p></p>
     </div>
     <!-- 最后一个图片元素，使用 is-offset-1 -->
-    <div class="column is-2 has-text-centered">
-      <img src="./static/new_resource/init_pngs/Covers_Headers_64.png"
+    <div class="column is-2 ">
+      <div class="image_container">
+        <img src="./static/new_resource/init_pngs/Covers_Headers_64.png"
+             class="interpolation-image"
+             alt="Your image alt"/>
+        <div class="caption">
+          <div>Design a Facebook cover image that promotes the importance of conservation and the preservation of nature. The text 'Save Our Oxygen Source' emphasizes the significance of forests in producing oxygen.</div>
+        </div>
+      </div>
 
-
-           class="interpolation-image"
-           alt="Your image alt"/>
       <p></p>
     </div>
   </div>
